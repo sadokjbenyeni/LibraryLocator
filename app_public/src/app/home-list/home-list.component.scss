@@ -1,0 +1,15 @@
+.side {
+  grid-column: side;
+}
+.main {
+  grid-column: main;
+}
+
+.container-card {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-template-areas: 
+    "main side";
+   grid-gap: 1rem;
+
+}
