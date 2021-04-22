@@ -1,21 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeListComponent } from './home-list/home-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
-
+import { LocationDetailsComponent } from './location-details/location-details.component';
+import { AboutComponent } from './about/about.component';
+import { AngularMaterialModule } from './angular-material.module';
 @NgModule({
   declarations: [
-    HomeListComponent
+    HomeListComponent,
+    LocationDetailsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatCardModule
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [HomeListComponent]
