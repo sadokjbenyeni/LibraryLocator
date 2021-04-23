@@ -1,7 +1,15 @@
 <div class="wrapper">
     <mat-toolbar color="primary">
-        <span>Library Locator</span>
-        <span>&nbsp; About</span>
+        <mat-toolbar-row class="primary-navbar">
+            <span class="navbar-icon"></span>
+            <span class="nav-title">Library Locator</span>
+            <span class="nav-element">About</span>
+            <span class="nav-spacer"></span>
+            <mat-icon class="nav-element" aria-hidden="false">invert_colors</mat-icon>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            <span class="nav-element">List of libraries</span>
+        </mat-toolbar-row>
     </mat-toolbar>
     <div>
 
@@ -52,7 +60,10 @@
                 libraries to your position</p>
         </div>
     </mat-card>
-    <mat-toolbar class="footer">
+    <mat-toolbar class="footer" color="primary">
         <p>Copyright © 2021 All Rights Reserved by Sadok Jbenyeni</p>
+        <span class="nav-spacer"></span>
+        <mat-icon>mail</mat-icon>
+        <span class="gitlab-icon"></span>
     </mat-toolbar>
 </div>

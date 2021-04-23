@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,7 +11,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$library-locator-public-primary: mat-palette($mat-blue-grey, 400, 600, 200);
+$library-locator-public-primary: mat-palette($mat-brown, 800, 900, 600);
 $library-locator-public-accent: mat-palette($mat-teal, 500, 700, 200);
 
 // The warn palette is optional (defaults to red).
@@ -20,19 +19,26 @@ $library-locator-public-warn: mat-palette($mat-red, 900, 700, 400);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$library-locator-public-theme: mat-light-theme((
-  color: (
-    primary: $library-locator-public-primary,
-    accent: $library-locator-public-accent,
-    warn: $library-locator-public-warn,
+$library-locator-public-theme: mat-light-theme(
+  (
+    color: (
+      primary: $library-locator-public-primary,
+      accent: $library-locator-public-accent,
+      warn: $library-locator-public-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($library-locator-public-theme);
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
