@@ -5,7 +5,10 @@
             <span class="nav-title">Library Locator</span>
             <span class="nav-element">About</span>
             <span class="nav-spacer"></span>
-            <mat-icon class="nav-element" aria-hidden="false">invert_colors</mat-icon>
+            <button mat-icon-button mat-raised-button matTooltip="Enable {{theme}} theme" [value]="theme"
+                (click)="toggleTheme()">
+                <mat-icon class=" nav-element" aria-hidden="false">invert_colors</mat-icon>
+            </button>
         </mat-toolbar-row>
         <mat-toolbar-row>
             <span class="nav-element">List of libraries</span>
@@ -62,7 +65,11 @@
     <mat-toolbar class="footer" color="primary">
         <p>Copyright © 2021 All Rights Reserved by Sadok Jbenyeni</p>
         <span class="nav-spacer"></span>
-        <mat-icon>mail</mat-icon>
-        <span class="gitlab-icon"></span>
+        <button mat-icon-button>
+            <mat-icon>mail</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <span class="gitlab-icon"></span>
+        </button>
     </mat-toolbar>
 </div>

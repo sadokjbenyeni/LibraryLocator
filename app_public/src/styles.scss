@@ -16,8 +16,8 @@ $custom-typography: mat-typography-config(
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$library-locator-public-primary: mat-palette($mat-brown, 800, 900, 600);
-$library-locator-public-accent: mat-palette($mat-teal, 500, 700, 200);
+$library-locator-public-primary: mat-palette($mat-blue-grey, 100, 200);
+$library-locator-public-accent: mat-palette($mat-brown, 800, 900, 600);
 
 // The warn palette is optional (defaults to red).
 $library-locator-public-warn: mat-palette($mat-red, 900, 700, 400);
@@ -33,11 +33,28 @@ $library-locator-public-theme: mat-light-theme(
     ),
   )
 );
-
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($library-locator-public-theme);
+
+//Define an alternate dark theme
+$library-locator-dark-primary: mat-palette($mat-grey, 900, 800);
+$library-locator-dark-accent: mat-palette($mat-brown, 300, 200);
+$library-locator-dark-warn: mat-palette($mat-deep-orange, 500, A400);
+$library-locator-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $library-locator-dark-primary,
+      accent: $library-locator-dark-accent,
+      warn: $library-locator-dark-warn,
+    ),
+  )
+);
+
+.dark-theme {
+  @include angular-material-color($library-locator-dark-theme);
+}
 
 html,
 body {
