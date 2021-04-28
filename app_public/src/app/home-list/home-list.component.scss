@@ -49,19 +49,46 @@
 }
 
 .navbar-icon {
-  background: url("../../assets/icons/library-icon.png");
-  height: 26px;
-  width: 26px;
+  background: url("../../assets/icons/icon.png");
+  height: 56px;
+  width: 256px;
   display: block;
   margin-left: 1%;
 }
 
 .gitlab-icon {
-  background: url("../../assets/icons/gitlab-icon.png");
+  background: url("../../assets/icons/gitlab.png");
   height: 26px;
   width: 26px;
   display: block;
-  margin-left: 1%;
+  margin-left: 17%;
+  fill: white;
+}
+
+.protonmail-icon {
+  background: url("../../assets/icons/proton-mail.png");
+  height: 26px;
+  width: 26px;
+  display: block;
+  margin-left: 17%;
+  fill: white;
+}
+
+.light-off-icon {
+  background: url("../../assets/icons/light-off.png");
+  height: 32px;
+  width: 32px;
+  display: block;
+  margin-left: 11%;
+  fill: white;
+}
+
+.light-on-icon {
+  background: url("../../assets/icons/light-on.png");
+  height: 32px;
+  width: 32px;
+  display: block;
+  margin-left: 11%;
   fill: white;
 }
 

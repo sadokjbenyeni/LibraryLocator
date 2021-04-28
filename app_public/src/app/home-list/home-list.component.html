@@ -2,12 +2,11 @@
     <mat-toolbar color="primary">
         <mat-toolbar-row class="primary-navbar">
             <span class="navbar-icon"></span>
-            <span class="nav-title">Library Locator</span>
             <span class="nav-element">About</span>
             <span class="nav-spacer"></span>
-            <button mat-icon-button mat-raised-button matTooltip="Enable {{theme}} theme" [value]="theme"
-                (click)="toggleTheme()">
-                <mat-icon class=" nav-element" aria-hidden="false">invert_colors</mat-icon>
+            <button mat-icon-button matTooltip="Enable {{theme}} theme"  [value]="theme" (click)="toggleTheme()">
+                <span *ngIf="theme == 'light'" class="light-off-icon" ></span>
+                <span *ngIf="theme == 'dark'" class="light-on-icon"></span>
             </button>
         </mat-toolbar-row>
         <mat-toolbar-row>
@@ -22,6 +21,7 @@
             <mat-card>
                 <p>Name</p>
                 <p>Address</p>
+                <mat-chip>200m</mat-chip>
             </mat-card>
             <mat-card>
                 <p>Name</p>
@@ -66,10 +66,10 @@
         <p>Copyright © 2021 All Rights Reserved by Sadok Jbenyeni</p>
         <span class="nav-spacer"></span>
         <button mat-icon-button>
-            <mat-icon>mail</mat-icon>
+            <span class="gitlab-icon"></span>
         </button>
         <button mat-icon-button>
-            <span class="gitlab-icon"></span>
+            <span class="protonmail-icon"></span>
         </button>
     </mat-toolbar>
 </div>
