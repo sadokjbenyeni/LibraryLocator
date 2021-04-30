@@ -12,11 +12,14 @@ export class HomeListComponent implements OnInit {
   private static readonly DARK_THEME_DARK = 'dark';
 
   public theme = HomeListComponent.DARK_THEME_DARK;
-
+  public mobile = false;
   constructor(@Inject(DOCUMENT) private document: Document) {
   }
 
   ngOnInit(): void {
+    if (window.screen.width < 600) {
+      this.mobile = true;
+    }
   }
 
   public toggleTheme(): void {
@@ -29,13 +32,4 @@ export class HomeListComponent implements OnInit {
       this.theme = 'light';
     }
   }
-  // public selectDarkTheme(): void {
-  //   this.document.documentElement.classList.add(HomeListComponent.DARK_THEME_CLASS);
-  //   this.theme = HomeListComponent.DARK_THEME_DARK;
-  // }
-
-  // public selectLightTheme(): void {
-  //   this.document.documentElement.classList.remove(HomeListComponent.DARK_THEME_CLASS);
-  //   this.theme = HomeListComponent.DARK_THEME_LIGHT;
-  // }
 }

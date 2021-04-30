@@ -37,7 +37,9 @@
 }
 
 .nav-element {
-  padding: 0 5%;
+  padding: 0 3%;
+  font-size: 85%;
+  font-family: "Spartan";
 }
 
 .nav-title {
@@ -48,12 +50,23 @@
   flex: 1 1 auto;
 }
 
-.navbar-icon {
-  background: url("../../assets/icons/icon.png");
-  height: 56px;
-  width: 256px;
-  display: block;
-  margin-left: 1%;
+@media screen and (min-width: 500px) {
+  .navbar-icon {
+    background: url("../../assets/icons/icon.png");
+    height: 56px;
+    width: 256px;
+    display: block;
+    margin-left: 1%;
+  }
+}
+@media screen and (max-width: 499px) {
+  .navbar-icon {
+    background: url("../../assets/icons/icon-phone.png");
+    height: 42px;
+    width: 192px;
+    display: block;
+    margin-left: 1%;
+  }
 }
 
 .gitlab-icon {
@@ -98,4 +111,81 @@
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.sidenav {
+  width: 85%;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sidenav-icon {
+  margin-left: 7%;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.sidenav-element {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.navbar-sidenav {
+  height: 14vw;
+  position: relative;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+
+  li {
+    padding: 6px 0;
+
+    a {
+      position: relative;
+      display: block;
+      padding: 1px 20px;
+      color: #8e9192;
+      text-decoration: none;
+      transition: 0.5s;
+      padding-right: 25px !important;
+      font-family: Spartan;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #00aeff;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s;
+      }
+
+      &:hover {
+        color: #474c4c;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  }
 }

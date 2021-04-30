@@ -1,75 +1,96 @@
-<div class="wrapper">
-    <mat-toolbar color="primary">
-        <mat-toolbar-row class="primary-navbar">
-            <span class="navbar-icon"></span>
-            <span class="nav-element">About</span>
-            <span class="nav-spacer"></span>
-            <button mat-icon-button matTooltip="Enable {{theme}} theme"  [value]="theme" (click)="toggleTheme()">
-                <span *ngIf="theme == 'light'" class="light-off-icon" ></span>
-                <span *ngIf="theme == 'dark'" class="light-on-icon"></span>
-            </button>
-        </mat-toolbar-row>
-        <mat-toolbar-row>
-            <span class="nav-element">List of libraries</span>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <div>
+<mat-drawer-container>
+    <mat-drawer #drawer class="sidenav" mode="over">
+        <div class="navbar-sidenav">
+            <span class="navbar-icon sidenav-icon"></span>
+        </div>
+        <hr class="shadow">
+        <ul>
+            <li>
+                <a class="sidenav-element" href="">About</a>
+            </li>
+        </ul>
+    </mat-drawer>
+    <div class="wrapper">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row class="primary-navbar">
+                <button *ngIf="mobile" mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span class="navbar-icon"></span>
+                <span class="nav-spacer"></span>
+                <ul *ngIf="!mobile">
+                    <li>
+                        <a class="sidenav-element nav-element" href="">About</a>
+                    </li>
+                </ul>
+                <button mat-icon-button matTooltip="Enable {{theme}} theme" [value]="theme" (click)="toggleTheme()">
+                    <span *ngIf="theme == 'light'" class="light-off-icon"></span>
+                    <span *ngIf="theme == 'dark'" class="light-on-icon"></span>
+                </button>
+            </mat-toolbar-row>
+            <mat-toolbar-row>
+                <span class="nav-element">List of libraries</span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <div>
 
+        </div>
+        <mat-card class="container-card">
+            <div class="main">
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                    <mat-chip>200m</mat-chip>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+                <mat-card>
+                    <p>Name</p>
+                    <p>Address</p>
+                </mat-card>
+            </div>
+            <div class="side">
+                <p>Looking for a place where you can get knowledge, learn and study our service gives you the list of
+                    the
+                    nearest
+                    libraries to your position</p>
+            </div>
+        </mat-card>
+        <mat-toolbar class="footer" color="primary">
+            <p>Copyright © 2021 All Rights Reserved by Sadok Jbenyeni</p>
+            <span class="nav-spacer"></span>
+            <button mat-icon-button>
+                <span class="gitlab-icon"></span>
+            </button>
+            <button mat-icon-button>
+                <span class="protonmail-icon"></span>
+            </button>
+        </mat-toolbar>
     </div>
-    <mat-card class="container-card">
-        <div class="main">
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-                <mat-chip>200m</mat-chip>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-            <mat-card>
-                <p>Name</p>
-                <p>Address</p>
-            </mat-card>
-        </div>
-        <div class="side">
-            <p>Looking for a place where you can get knowledge, learn and study our service gives you the list of the
-                nearest
-                libraries to your position</p>
-        </div>
-    </mat-card>
-    <mat-toolbar class="footer" color="primary">
-        <p>Copyright © 2021 All Rights Reserved by Sadok Jbenyeni</p>
-        <span class="nav-spacer"></span>
-        <button mat-icon-button>
-            <span class="gitlab-icon"></span>
-        </button>
-        <button mat-icon-button>
-            <span class="protonmail-icon"></span>
-        </button>
-    </mat-toolbar>
-</div>
+</mat-drawer-container>
