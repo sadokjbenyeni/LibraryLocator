@@ -28,18 +28,26 @@
   padding: 8px 16px;
 }
 
+@media screen and (min-width: 600px) {
+  .footer > p {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .footer > p {
+    font-size: 50%;
+  }
+}
+
 .footer > p {
-  font-size: 50%;
+  margin-top: 12px;
+  font-family: "Thasadith";
+  font-weight: 100;
 }
 
 .title {
   font-size: 80%;
-}
-
-.nav-element {
-  padding: 0 3%;
-  font-size: 85%;
-  font-family: "Spartan";
 }
 
 .nav-title {
@@ -156,14 +164,16 @@ ul {
     padding: 6px 0;
 
     a {
+      padding: 0 3%;
+      font-size: 80%;
       position: relative;
       display: block;
       padding: 1px 20px;
-      color: #8e9192;
+      color: #787879;
       text-decoration: none;
       transition: 0.5s;
       padding-right: 25px !important;
-      font-family: Spartan;
+      font-family: "Thasadith";
 
       &::after {
         position: absolute;
@@ -188,4 +198,12 @@ ul {
       }
     }
   }
+}
+
+.page-title {
+  padding: 0 3%;
+  font-family: "Thasadith";
+  font-weight: 100;
+  font-size: 130%;
+  color: #5c5c5c;
 }

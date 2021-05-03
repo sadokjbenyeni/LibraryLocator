@@ -20,7 +20,7 @@
                 <span class="nav-spacer"></span>
                 <ul *ngIf="!mobile">
                     <li>
-                        <a class="sidenav-element nav-element" href="">About</a>
+                        <a class="sidenav-element" href="">About</a>
                     </li>
                 </ul>
                 <button mat-icon-button matTooltip="Enable {{theme}} theme" [value]="theme" (click)="toggleTheme()">
@@ -29,7 +29,7 @@
                 </button>
             </mat-toolbar-row>
             <mat-toolbar-row>
-                <span class="nav-element">List of libraries</span>
+                <span class="page-title">List of libraries</span>
             </mat-toolbar-row>
         </mat-toolbar>
         <div>
@@ -83,13 +83,13 @@
             </div>
         </mat-card>
         <mat-toolbar class="footer" color="primary">
-            <p>Copyright © 2021 All Rights Reserved by Sadok Jbenyeni</p>
+            <p>Copyright © 2021 All Rights Reserved by <b>Sadok Jbenyeni</b></p>
             <span class="nav-spacer"></span>
             <button mat-icon-button>
-                <span class="gitlab-icon"></span>
+                <a class="gitlab-icon" href="https://gitlab.com/sadokjbenyeni"></a>
             </button>
             <button mat-icon-button>
-                <span class="protonmail-icon"></span>
+                <a class="protonmail-icon" href="mailto:sadok.jbenyeni@protonmail.com"></a>
             </button>
         </mat-toolbar>
     </div>
