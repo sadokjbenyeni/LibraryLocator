@@ -23,9 +23,9 @@
                         <a class="sidenav-element" href="">About</a>
                     </li>
                 </ul>
-                <button mat-icon-button matTooltip="Enable {{theme}} theme" [value]="theme" (click)="toggleTheme()">
-                    <span *ngIf="theme == 'light'" class="light-off-icon"></span>
-                    <span *ngIf="theme == 'dark'" class="light-on-icon"></span>
+                <button mat-icon-button matTooltip="Switch off {{theme}} theme" (click)="toggleTheme()">
+                    <span *ngIf="theme == 'dark'" class="light-off-icon"></span>
+                    <span *ngIf="theme == 'light'" class="light-on-icon"></span>
                 </button>
             </mat-toolbar-row>
             <mat-toolbar-row>
@@ -86,7 +86,7 @@
                     <br> We provide a location finder service that helps you
                     <br>find libraries you where you can study and get books
                 </p>
-                <span class="footer-icon"></span>
+                <span class="footer-icon navbar-icon"></span>
 
             </mat-toolbar-row>
             <mat-toolbar-row class="footer" color="primary">
