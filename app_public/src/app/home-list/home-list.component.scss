@@ -29,21 +29,15 @@
 }
 
 @media screen and (min-width: 600px) {
-  .footer > p {
+  .footer-content {
     font-size: 80%;
   }
 }
 
 @media screen and (max-width: 599px) {
-  .footer > p {
+  .footer-content {
     font-size: 50%;
   }
-}
-
-.footer > p {
-  margin-top: 12px;
-  font-family: "Thasadith";
-  font-weight: 100;
 }
 
 .title {
@@ -206,4 +200,47 @@ ul {
   font-weight: 100;
   font-size: 130%;
   color: #5c5c5c;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  height :0%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px;
+}
+
+.footer-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 100%;
+  margin-left: 1%;
+}
+
+.footer-text {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-left: 1%;
+
+}
+.footer-icon {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  background: url("../../assets/icons/footer-icon.png");
+  height: 46px;
+  width: 46px;
+  display: block;
+  margin-left: 20%;
+}
+
+.footer-content {
+  font-family: "Thasadith";
+  font-weight: 100;
+  color: #696969;
 }
