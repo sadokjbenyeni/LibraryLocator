@@ -1,141 +1,81 @@
-<mat-drawer-container>
-    <mat-drawer #drawer class="sidenav" mode="over">
-        <div class="navbar-sidenav">
-            <span class="navbar-icon sidenav-icon"></span>
-        </div>
-        <hr class="shadow">
-        <ul>
-            <li>
-                <a class="sidenav-element" href="">About</a>
-            </li>
-        </ul>
-    </mat-drawer>
-    <div class="wrapper">
-        <mat-toolbar color="primary">
-            <mat-toolbar-row class="primary-navbar">
-                <button *ngIf="mobile" mat-icon-button (click)="drawer.toggle()">
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <span class="navbar-icon"></span>
-                <span class="nav-spacer"></span>
-                <ul *ngIf="!mobile">
-                    <li>
-                        <a class="sidenav-element" href="">About</a>
-                    </li>
-                </ul>
-                <button mat-icon-button matTooltip="Switch off {{theme}} theme" (click)="toggleTheme()">
-                    <span *ngIf="theme == 'dark'" class="light-off-icon"></span>
-                    <span *ngIf="theme == 'light'" class="light-on-icon"></span>
-                </button>
-            </mat-toolbar-row>
-            <mat-toolbar-row>
-                <span class="page-title">List of libraries</span>
-            </mat-toolbar-row>
-        </mat-toolbar>
-        <div>
-
-        </div>
-        <div>
-            <mat-list>
-                <mat-list-item>
-                    <p matLine>NATIONAL LIBRARY</p>
-                    <p matLine>Address</p>
-                    <mat-chip-list matLine>
-                        <mat-chip color="accent" disabled> SnackBar</mat-chip>
-                        <mat-chip color="accent" selected>Wifi</mat-chip>
-                        <mat-chip color="accent" selected>Garden</mat-chip>
-                    </mat-chip-list>
-                    <span class="chip-spacer"></span>
-                    <mat-chip color="warn" selected>200m</mat-chip>
-                </mat-list-item>
-                <mat-list-item>
-                    <p matLine>NATIONAL LIBRARY</p>
-                    <p matLine>Address</p>
-                    <mat-chip-list matLine>
-                        <mat-chip color="accent" disabled> SnackBar</mat-chip>
-                        <mat-chip color="accent" selected>Wifi</mat-chip>
-                        <mat-chip color="accent" selected>Garden</mat-chip>
-                    </mat-chip-list>
-                    <span class="chip-spacer"></span>
-                    <mat-chip color="warn" selected>200m</mat-chip>
-                </mat-list-item>
-                <mat-list-item>
-                    <p matLine>NATIONAL LIBRARY</p>
-                    <p matLine>Address</p>
-                    <mat-chip-list matLine>
-                        <mat-chip color="accent" disabled> SnackBar</mat-chip>
-                        <mat-chip color="accent" selected>Wifi</mat-chip>
-                        <mat-chip color="accent" selected>Garden</mat-chip>
-                    </mat-chip-list>
-                    <span class="chip-spacer"></span>
-                    <mat-chip color="warn" selected>200m</mat-chip>
-                </mat-list-item>
-                <mat-list-item>
-                    <p matLine>NATIONAL LIBRARY</p>
-                    <p matLine>Address</p>
-                    <mat-chip-list matLine>
-                        <mat-chip color="accent" disabled> SnackBar</mat-chip>
-                        <mat-chip color="accent" selected>Wifi</mat-chip>
-                        <mat-chip color="accent" selected>Garden</mat-chip>
-                    </mat-chip-list>
-                    <span class="chip-spacer"></span>
-                    <mat-chip color="warn" selected>200m</mat-chip>
-                </mat-list-item>
-                <mat-list-item>
-                    <p matLine>NATIONAL LIBRARY</p>
-                    <p matLine>Address</p>
-                    <mat-chip-list matLine>
-                        <mat-chip color="accent" disabled> SnackBar</mat-chip>
-                        <mat-chip color="accent" selected>Wifi</mat-chip>
-                        <mat-chip color="accent" selected>Garden</mat-chip>
-                    </mat-chip-list>
-                    <span class="chip-spacer"></span>
-                    <mat-chip color="warn" selected>200m</mat-chip>
-                </mat-list-item>
-                <mat-list-item>
-                    <p matLine>NATIONAL LIBRARY</p>
-                    <p matLine>Address</p>
-                    <mat-chip-list matLine>
-                        <mat-chip color="accent" disabled> SnackBar</mat-chip>
-                        <mat-chip color="accent" selected>Wifi</mat-chip>
-                        <mat-chip color="accent" selected>Garden</mat-chip>
-                    </mat-chip-list>
-                    <span class="chip-spacer"></span>
-                    <mat-chip color="warn" selected>200m</mat-chip>
-                </mat-list-item>
-                <mat-list-item>
-                    <p matLine>NATIONAL LIBRARY</p>
-                    <p matLine>Address</p>
-                    <mat-chip-list matLine>
-                        <mat-chip color="accent" disabled> SnackBar</mat-chip>
-                        <mat-chip color="accent" selected>Wifi</mat-chip>
-                        <mat-chip color="accent" selected>Garden</mat-chip>
-                    </mat-chip-list>
-                    <span class="chip-spacer"></span>
-                    <mat-chip color="warn" selected>200m</mat-chip>
-                </mat-list-item>
-            </mat-list>
-        </div>
-        <mat-toolbar>
-            <mat-toolbar-row class="footer-container" color="primary">
-                <p class="footer-content footer-title"><b>Library Locator</b></p>
-                <p class="footer-content footer-text ">Library locator is an free and open source application.
-                    <br> We provide a location finder service that helps you
-                    <br>find libraries you where you can study and get books
-                </p>
-                <span class="footer-icon"></span>
-
-            </mat-toolbar-row>
-            <mat-toolbar-row class="footer" color="primary">
-                <p class="footer-content">Copyright © 2021 All Rights Reserved by <b>Sadok Jbenyeni</b></p>
-                <span class="nav-spacer"></span>
-                <button mat-icon-button>
-                    <a class="gitlab-icon" href="https://gitlab.com/sadokjbenyeni"></a>
-                </button>
-                <button mat-icon-button>
-                    <a class="protonmail-icon" href="mailto:sadok.jbenyeni@protonmail.com"></a>
-                </button>
-            </mat-toolbar-row>
-        </mat-toolbar>
-    </div>
-</mat-drawer-container>
+<div>
+    <mat-list>
+        <mat-list-item>
+            <p matLine>NATIONAL LIBRARY</p>
+            <p matLine>Address</p>
+            <mat-chip-list matLine>
+                <mat-chip color="accent" disabled> SnackBar</mat-chip>
+                <mat-chip color="accent" selected>Wifi</mat-chip>
+                <mat-chip color="accent" selected>Garden</mat-chip>
+            </mat-chip-list>
+            <span class="chip-spacer"></span>
+            <mat-chip color="warn" selected>200m</mat-chip>
+        </mat-list-item>
+        <mat-list-item>
+            <p matLine>NATIONAL LIBRARY</p>
+            <p matLine>Address</p>
+            <mat-chip-list matLine>
+                <mat-chip color="accent" disabled> SnackBar</mat-chip>
+                <mat-chip color="accent" selected>Wifi</mat-chip>
+                <mat-chip color="accent" selected>Garden</mat-chip>
+            </mat-chip-list>
+            <span class="chip-spacer"></span>
+            <mat-chip color="warn" selected>200m</mat-chip>
+        </mat-list-item>
+        <mat-list-item>
+            <p matLine>NATIONAL LIBRARY</p>
+            <p matLine>Address</p>
+            <mat-chip-list matLine>
+                <mat-chip color="accent" disabled> SnackBar</mat-chip>
+                <mat-chip color="accent" selected>Wifi</mat-chip>
+                <mat-chip color="accent" selected>Garden</mat-chip>
+            </mat-chip-list>
+            <span class="chip-spacer"></span>
+            <mat-chip color="warn" selected>200m</mat-chip>
+        </mat-list-item>
+        <mat-list-item>
+            <p matLine>NATIONAL LIBRARY</p>
+            <p matLine>Address</p>
+            <mat-chip-list matLine>
+                <mat-chip color="accent" disabled> SnackBar</mat-chip>
+                <mat-chip color="accent" selected>Wifi</mat-chip>
+                <mat-chip color="accent" selected>Garden</mat-chip>
+            </mat-chip-list>
+            <span class="chip-spacer"></span>
+            <mat-chip color="warn" selected>200m</mat-chip>
+        </mat-list-item>
+        <mat-list-item>
+            <p matLine>NATIONAL LIBRARY</p>
+            <p matLine>Address</p>
+            <mat-chip-list matLine>
+                <mat-chip color="accent" disabled> SnackBar</mat-chip>
+                <mat-chip color="accent" selected>Wifi</mat-chip>
+                <mat-chip color="accent" selected>Garden</mat-chip>
+            </mat-chip-list>
+            <span class="chip-spacer"></span>
+            <mat-chip color="warn" selected>200m</mat-chip>
+        </mat-list-item>
+        <mat-list-item>
+            <p matLine>NATIONAL LIBRARY</p>
+            <p matLine>Address</p>
+            <mat-chip-list matLine>
+                <mat-chip color="accent" disabled> SnackBar</mat-chip>
+                <mat-chip color="accent" selected>Wifi</mat-chip>
+                <mat-chip color="accent" selected>Garden</mat-chip>
+            </mat-chip-list>
+            <span class="chip-spacer"></span>
+            <mat-chip color="warn" selected>200m</mat-chip>
+        </mat-list-item>
+        <mat-list-item>
+            <p matLine>NATIONAL LIBRARY</p>
+            <p matLine>Address</p>
+            <mat-chip-list matLine>
+                <mat-chip color="accent" disabled> SnackBar</mat-chip>
+                <mat-chip color="accent" selected>Wifi</mat-chip>
+                <mat-chip color="accent" selected>Garden</mat-chip>
+            </mat-chip-list>
+            <span class="chip-spacer"></span>
+            <mat-chip color="warn" selected>200m</mat-chip>
+        </mat-list-item>
+    </mat-list>
+</div>
