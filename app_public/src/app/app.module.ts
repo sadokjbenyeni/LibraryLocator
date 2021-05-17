@@ -22,6 +22,10 @@ import { FrameworkComponent } from './framework/framework.component';
     {
       path: 'about',
       component: AboutComponent
+    },
+    {
+      path: 'library/:libraryId',
+      component: LocationDetailsComponent
     }]
     ),
     BrowserModule,
