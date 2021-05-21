@@ -24,7 +24,7 @@ import { FrameworkComponent } from './framework/framework.component';
       component: AboutComponent
     },
     {
-      path: 'library/:libraryId',
+      path: 'libraries/:libraryId',
       component: LocationDetailsComponent
     }]
     ),
