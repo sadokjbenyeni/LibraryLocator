@@ -16,8 +16,14 @@ export class LocationDetailsComponent implements OnInit {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [10.17, 36.8],
-      zoom: 9
+      zoom: 14
     });
+
+    const marker = new mapboxgl.Marker({
+      color: 'red',
+      draggable: true
+      }).setLngLat([10.1634, 36.79999])
+      .addTo(map);
   }
 
 
