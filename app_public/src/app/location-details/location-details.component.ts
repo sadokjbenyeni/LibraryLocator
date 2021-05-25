@@ -15,8 +15,8 @@ export class LocationDetailsComponent implements OnInit {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [10.17, 36.8],
-      zoom: 14
+      center: [10.1634, 36.79999],
+      zoom: 13
     });
 
     const marker = new mapboxgl.Marker({

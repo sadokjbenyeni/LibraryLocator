@@ -2,3 +2,18 @@ mat-list-item {
   padding: 1% 0 1% !important;
   border-bottom: 3px solid rgba(145, 145, 145, 0.2);
 }
+
+mat-list-item:hover{
+  background-color: rgba(150, 149, 149, 0.2);
+}
+
+.title {
+  font-weight: 900 !important;
+  font-size: x-large !important; 
+  text-decoration: none;
+  color: rgb(134, 148, 148);
+}
+
+.title:hover {
+  color: rgb(214, 58, 58);
+}
