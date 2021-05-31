@@ -36,7 +36,7 @@
   
   @media screen and (min-width: 500px) {
     .navbar-icon {
-      background: url("../../assets/icons/icon.png");
+      background: url("../../../assets/icons/icon.png");
       height: 56px;
       width: 256px;
       display: block;
@@ -45,7 +45,7 @@
   }
   @media screen and (max-width: 499px) {
     .navbar-icon {
-      background: url("../../assets/icons/icon-phone.png");
+      background: url("../../../assets/icons/icon-phone.png");
       height: 42px;
       width: 192px;
       display: block;
@@ -54,7 +54,7 @@
   }
   
   .gitlab-icon {
-    background: url("../../assets/icons/gitlab.png");
+    background: url("../../../assets/icons/gitlab.png");
     height: 26px;
     width: 26px;
     display: block;
@@ -63,7 +63,7 @@
   }
   
   .protonmail-icon {
-    background: url("../../assets/icons/proton-mail.png");
+    background: url("../../../assets/icons/proton-mail.png");
     height: 26px;
     width: 26px;
     display: block;
@@ -72,7 +72,7 @@
   }
   
   .light-off-icon {
-    background: url("../../assets/icons/light-off.png");
+    background: url("../../../assets/icons/light-off.png");
     height: 32px;
     width: 32px;
     display: block;
@@ -81,7 +81,7 @@
   }
   
   .light-on-icon {
-    background: url("../../assets/icons/light-on.png");
+    background: url("../../../assets/icons/light-on.png");
     height: 32px;
     width: 32px;
     display: block;
@@ -212,7 +212,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-    background: url("../../assets/icons/footer-icon.png");
+    background: url("../../../assets/icons/footer-icon.png");
     height: 46px;
     width: 46px;
     display: block;
