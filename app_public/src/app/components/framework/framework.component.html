@@ -12,12 +12,11 @@
         </ul>
     </mat-drawer>
     <div class="wrapper">
-        <mat-toolbar color="primary">
-            <mat-toolbar-row class="primary-navbar">
+        <mat-toolbar color="primary" class="primary-navbar">
                 <button *ngIf="mobile" mat-icon-button (click)="drawer.toggle()">
                     <mat-icon>menu</mat-icon>
                 </button>
-                <span class="navbar-icon"></span>
+                <a href="/"><span class="navbar-icon"></span></a>
                 <span class="nav-spacer"></span>
                 <ul *ngIf="!mobile">
                     <li>
@@ -28,10 +27,6 @@
                     <span *ngIf="theme == 'dark'" class="light-off-icon"></span>
                     <span *ngIf="theme == 'light'" class="light-on-icon"></span>
                 </button>
-            </mat-toolbar-row>
-            <mat-toolbar-row>
-                <span class="page-title">List of libraries</span>
-            </mat-toolbar-row>
         </mat-toolbar>
         <div>
 
