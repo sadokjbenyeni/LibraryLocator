@@ -26,6 +26,11 @@ export class LocationDetailsComponent implements OnInit {
   private getLocations(position: any): void {
     this.message = 'Searching for nearby places';
     mapboxgl.accessToken = ACCESS_TOKEN;
+    mapboxgl.setRTLTextPlugin(
+      'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
+      null,
+      true
+    );
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
