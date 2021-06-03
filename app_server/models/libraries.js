@@ -23,11 +23,10 @@ const librarySchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    openingHours: [String],
-    phone: Number,
+    facilities: [String],
+    phone: String,
     website: String,
     socialMedia: [String],
-    email: String,
     portal: String,
     coords: {
         type: { type: String },
