@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GeolocationService } from 'src/app/services/geolocation.service';
+import { LibraryLocatorDataService } from 'src/app/services/library-locator-data.service';
+import { Library } from '../../models/library';
 const mapboxgl = require('mapbox-gl');
 const ACCESS_TOKEN = 'pk.eyJ1Ijoic3RhbmRhbDEiLCJhIjoiY2tpc3JqYXhmMGhkMDJ1bW1jMmpqZ3hnNSJ9.rJKWNXdRMFANIujV3y08nQ';
 

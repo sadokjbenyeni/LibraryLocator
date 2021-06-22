@@ -40,7 +40,6 @@ const createLibrary = async (req, res) => {
 };
 
 const getLibraryById = async (req, res) => {
-
     if (!req.params.libraryId) {
         return res.status(404).json({ 'Message': 'No library Id was provided!' });
     }

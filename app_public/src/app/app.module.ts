@@ -7,6 +7,7 @@ import { LocationDetailsComponent } from './components/location-details/location
 import { AboutComponent } from './components/about/about.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { FrameworkComponent } from './components/framework/framework.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     FrameworkComponent,
@@ -30,7 +31,8 @@ import { FrameworkComponent } from './components/framework/framework.component';
     ),
     BrowserModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [FrameworkComponent]
