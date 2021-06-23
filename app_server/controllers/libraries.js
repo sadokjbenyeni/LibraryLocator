@@ -55,10 +55,10 @@ const getLibraryById = async (req, res) => {
         res.status(500).json({ "Message": error });
     }
 }
-
 const getLibraries = async (req, res) => {
     const lng = parseFloat(req.query.lng);
     const lat = parseFloat(req.query.lat);
+    const maxDistance = parseFloat(req.query.maxDistance);
     const near = {
         type: "Point",
         coordinates: [lng, lat]
@@ -66,8 +66,8 @@ const getLibraries = async (req, res) => {
     const geoOptions = {
         distanceField: "distance.calculated",
         spherical: true,
-        maxDistance: req.body.maxDistance,
-        limit: 10
+
+        maxDistance: maxDistance
     };
     if (!lng || !lat) {
         return res.status(404).json({ 'Message': 'Coordinates parameters are required' });

@@ -10,11 +10,8 @@ export class LibraryLocatorDataService {
 
   private apiBaseUrl = 'http://localhost:3000/api';
 
-  public getLibraries(): Promise<Library[]> {
-    const lng: number = 0;
-    const lat: number = 0;
-    const maxDistance: number = 20;
-    const url: string = `${this.apiBaseUrl}/libraries?lng=${lng}&lat=${lat}&maxDistance=${maxDistance}`;
+  public getLibraries(lng: number, lat: number, maxDistance: number): Promise<Library[]> {
+    const url = `${this.apiBaseUrl}/libraries?lng=${lng}&lat=${lat}&maxDistance=${maxDistance}`;
     return this.http.get(url).toPromise().then(response => response as Library[]).catch(this.handleError);
   }
 
