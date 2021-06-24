@@ -8,6 +8,8 @@ import { AboutComponent } from './components/about/about.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { FrameworkComponent } from './components/framework/framework.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     FrameworkComponent,
@@ -32,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [FrameworkComponent]

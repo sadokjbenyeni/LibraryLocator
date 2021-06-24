@@ -33,3 +33,19 @@ mat-list-item:hover{
   font-weight: 100;
   font-size: 130%;
 }
+
+.max-dis{
+  font-size: 50%;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.mat-slider {
+  max-height: 10px;
+}
+
+.slider-container {
+  display: grid;
+  position: absolute;
+  right: 0;
+}

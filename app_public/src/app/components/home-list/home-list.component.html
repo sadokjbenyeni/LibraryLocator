@@ -1,6 +1,14 @@
 <mat-toolbar color="accent" class="primary-navbar">
     <span class="page-title">List of Libraries</span>
+    <span class="slider-container">
+        <mat-slider (input)="onInputChange($event)" color="warn" thumbLabel [displayWith]="formatLabel"
+            tickInterval="1000" step="1000" min="0" max="99000" aria-label="units">
+        </mat-slider>
+        <span class="max-dis">Maximum Distance</span> 
+    </span>
+
 </mat-toolbar>
+
 <div>
     <mat-list>
         <mat-list-item *ngFor="let library of libraries">
