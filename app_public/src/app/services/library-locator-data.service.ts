@@ -15,6 +15,10 @@ export class LibraryLocatorDataService {
     return this.http.get(url).toPromise().then(response => response as Library[]).catch(this.handleError);
   }
 
+  public getLibraryById(libraryId: string): Promise<Library> {
+    const url = `${this.apiBaseUrl}/library/${libraryId}`;
+    return this.http.get(url).toPromise().then(response => response as Library).catch(this.handleError);
+  }
   private handleError(error: any): Promise<any> {
     console.error('Something has gone wrong', error);
     return Promise.reject(error.message || error);

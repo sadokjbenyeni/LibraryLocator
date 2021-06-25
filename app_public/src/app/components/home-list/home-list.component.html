@@ -12,7 +12,7 @@
 <div>
     <mat-list>
         <mat-list-item *ngFor="let library of libraries">
-            <a matLine class="title" href="/libraries/library.id">{{library.name}}</a>
+            <a matLine class="title" href="/libraries/{{library.id}}">{{library.name}}</a>
             <h3 matLine>{{library.address}}</h3>
             <mat-chip-list matLine>
                 <mat-chip *ngFor="let facility of library.facilities" color="accent">{{facility}}</mat-chip>

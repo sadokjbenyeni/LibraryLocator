@@ -13,6 +13,13 @@ const openingTimeSchema = new mongoose.Schema({
     }
 });
 
+const socialMedia = new mongoose.Schema({
+    facebook: String,
+    youtube: String,
+    wikipedia: String,
+    other: String
+});
+
 const librarySchema = new mongoose.Schema({
     name: {
         type: String,
@@ -26,7 +33,7 @@ const librarySchema = new mongoose.Schema({
     facilities: [String],
     phone: String,
     website: String,
-    socialMedia: [String],
+    socialMedia: socialMedia,
     portal: String,
     coords: {
         type: { type: String },
@@ -37,4 +44,4 @@ const librarySchema = new mongoose.Schema({
 
 librarySchema.index({ coords: '2dsphere' });
 
-mongoose.model('Library', librarySchema);   
+mongoose.model('Library', librarySchema);

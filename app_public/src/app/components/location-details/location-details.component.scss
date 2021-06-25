@@ -40,7 +40,6 @@ body {
   }
 }
 
-
 .primary-navbar {
   align-items: center;
   padding: 8px 16px;
@@ -54,4 +53,40 @@ body {
   font-family: "Thasadith";
   font-weight: 100;
   font-size: 130%;
+}
+
+.facebook-icon {
+  background: url("../../../assets/icons/facebook.png");
+  height: 26px;
+  width: 26px;
+  display: block;
+  margin-left: 17%;
+  fill: white;
+}
+
+.youtube-icon {
+  background: url("../../../assets/icons/youtube.png");
+  height: 26px;
+  width: 26px;
+  display: block;
+  margin-left: 17%;
+  fill: white;
+}
+
+.wikipedia-icon {
+  background: url("../../../assets/icons/wikipedia.png");
+  height: 26px;
+  width: 26px;
+  display: block;
+  margin-left: 17%;
+  fill: white;
+}
+
+.other-icon {
+  background: url("../../../assets/icons/other.png");
+  height: 26px;
+  width: 26px;
+  display: block;
+  margin-left: 17%;
+  fill: white;
 }

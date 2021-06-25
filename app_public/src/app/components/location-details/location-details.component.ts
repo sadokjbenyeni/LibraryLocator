@@ -14,14 +14,15 @@ export class LocationDetailsComponent implements OnInit {
 
   public userLongitude: number;
   public userLatitude: number;
+  public libraryId = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 
-  constructor(private geolocationService: GeolocationService) { }
+  constructor(private geolocationService: GeolocationService, private libraryLocatorDataService: LibraryLocatorDataService) { }
 
   public message: string;
-  public libraryPosition: Array<number> = [10.1634, 36.79999];
-
+  public library: Library;
 
   ngOnInit(): void {
+    this.getLibraryDetails();
     this.getPosition();
   }
 
@@ -36,17 +37,20 @@ export class LocationDetailsComponent implements OnInit {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [this.libraryPosition[0], this.libraryPosition[1]],
+      center: [this.library.coords[1], this.library.coords[0]],
       zoom: 13
     });
-    map.center = [[this.libraryPosition[0], this.libraryPosition[1]]];
+    map.center = [[this.library.coords[1], this.library.coords[0]]];
     const marker = new mapboxgl.Marker({
       color: 'red',
       draggable: true
-    }).setLngLat([this.libraryPosition[0], this.libraryPosition[1]])
+    }).setLngLat([this.library.coords[1], this.library.coords[0]])
       .addTo(map);
   }
 
+  private getLibraryDetails(): void {
+    this.libraryLocatorDataService.getLibraryById(this.libraryId).then(foundLibrary => this.library = foundLibrary);
+  }
   private showError(error: any): void {
     this.message = error.message;
   }
@@ -62,15 +66,15 @@ export class LocationDetailsComponent implements OnInit {
       this.showError.bind(this),
       this.noGeo.bind(this));
   }
-  getCurrentLocation(): void {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const userLongitude = position.coords.longitude;
-        const userLatitude = position.coords.latitude;
-      });
-    } else {
-      console.log('No support for geolocation');
-    }
-  }
+  // getCurrentLocation(): void {
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition((position) => {
+  //       const userLongitude = position.coords.longitude;
+  //       const userLatitude = position.coords.latitude;
+  //     });
+  //   } else {
+  //     console.log('No support for geolocation');
+  //   }
+  // }
 
 }

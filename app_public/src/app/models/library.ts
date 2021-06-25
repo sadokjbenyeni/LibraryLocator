@@ -5,14 +5,21 @@ class OpeningTimes {
     closed: boolean;
 }
 
+class SocialMedia {
+    facebook: string;
+    youtube: string;
+    wikipedia: string;
+    other: string;
+}
+
 export class Library {
     name: string;
     foundationDate: number;
     address: string;
-    facilities: string[]
+    facilities: string[];
     phone: string;
     website: string;
-    socialMedia: string[];
+    socialMedia: SocialMedia;
     portal: string;
     coords: number[];
     openingTimes: OpeningTimes[];

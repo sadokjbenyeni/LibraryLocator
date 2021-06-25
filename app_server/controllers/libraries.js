@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const Library = mongoose.model('Library');
-
-
 const createLibrary = async (req, res) => {
     try {
         let library = await Library.create({
@@ -17,7 +15,12 @@ const createLibrary = async (req, res) => {
             },
             phone: req.body.phone,
             website: req.body.website,
-            socialMedia: req.body.socialMedia.split(","),
+            socialMedia: {
+                facebook: req.body.facebook,
+                youtube: req.body.youtube,
+                wikipedia: req.body.wikipedia,
+                other: req.body.other
+            },
             portal: req.body.portal,
             openingTimes: [{
                 days: req.body.days1,
@@ -119,7 +122,12 @@ const updateLibraryById = async (req, res) => {
                 },
                 library.phone = req.body.phone,
                 library.website = req.body.website,
-                library.socialMedia = req.body.socialMedia.split(","),
+                library.socialMedia = {
+                    facebook: req.body.facebook,
+                    youtube: req.body.youtube,
+                    wikipedia: req.body.wikipedia,
+                    other: req.body.other
+                },
                 library.portal = req.body.portal,
                 library.openingTimes = [{
                     days: req.body.days1,

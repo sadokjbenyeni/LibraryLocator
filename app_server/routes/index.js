@@ -8,7 +8,7 @@ router
     .post(librariesController.createLibrary);
 
 router
-    .route('library/:libraryId')
+    .route('/library/:libraryId')
     .get(librariesController.getLibraryById)
     .put(librariesController.updateLibraryById)
     .delete(librariesController.deleteLibraryById);

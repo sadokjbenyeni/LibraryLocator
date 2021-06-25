@@ -6,19 +6,41 @@
         <mat-card class="general-information">
             <mat-card-header>
                 <mat-card-title>
-                    <h1>National Library</h1>
+                    <h2>{{library.name}}</h2>
                 </mat-card-title>
                 <mat-card-subtitle>
-                    <h3>Since 1945</h3>
+                    <h3>Since {{library.foundationDate}}</h3>
                 </mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-                <h3><b>Address: </b>1008، Boulevard du 9 Avril 1938, Tunis</h3>
-                <h3><b>Opening Hours :</b> Monday to Saturday 8am to 6pm</h3>
-                <h3><b>Phone: </b>71 572 074</h3>
-                <h3><b>Website: </b>bibliotheque.nat.tn</h3>
-                <h3><b>Social Media: </b>facebook twitten logos</h3>
-                <h3><b>Portal: </b>portalwebsite.com</h3>
+                <p><b>Address: </b>{{library.address}}</p>
+                <p><b>Opening Hours :</b></p>
+                <div *ngFor="let time of library.openingTimes">
+                    <p><b>Days: </b>{{time.days}}</p>
+                    <p *ngIf="!time.closed">Opening: {{time.opening}} - Closing:{{time.closing}}</p>
+                    <p *ngIf="time.closed">Opening: Closed</p>
+                </div>
+                <p><b>Phone: </b>{{library.phone}}</p>
+                <p *ngIf="library.website"><b>Website: </b><a href="{{library.website}}">Library Website</a></p>
+                <div *ngIf="library.socialMedia">
+                    <p><b>Social Media: </b></p>
+                    <div >
+                        <button *ngIf="library.socialMedia.facebook" mat-icon-button>
+                            <a class="facebook-icon" href={{library.socialMedia.facebook}}></a>
+                        </button>
+                        <button *ngIf="library.socialMedia.youtube" mat-icon-button>
+                            <a class="youtube-icon" href={{library.socialMedia.youtube}}></a>
+                        </button>
+                        <button *ngIf="library.socialMedia.wikipedia" mat-icon-button>
+                            <a class="wikipedia-icon" href={{library.socialMedia.wikipedia}}></a>
+                        </button>
+                        <button *ngIf="library.socialMedia.other" mat-icon-button>
+                            <a class="other-icon" href={{library.socialMedia.other}}></a>
+                        </button>
+                    </div>
+                </div>
+                <p *ngIf="library.portal"><b>Portal: </b><a href="{{library.portal}}">Library Portal</a></p>
+
             </mat-card-content>
         </mat-card>
         <mat-card class="map">
