@@ -14,7 +14,7 @@ class SocialMedia {
 
 export class Library {
     name: string;
-    foundationDate: number;
+    foundationDate: string;
     address: string;
     facilities: string[];
     phone: string;

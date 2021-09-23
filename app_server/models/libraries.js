@@ -25,10 +25,9 @@ const librarySchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    foundationDate: Number,
+    foundationDate: String,
     address: {
         type: String,
-        required: true
     },
     facilities: [String],
     phone: String,
@@ -36,7 +35,7 @@ const librarySchema = new mongoose.Schema({
     socialMedia: socialMedia,
     portal: String,
     coords: {
-        type: { type: String },
+        type: { type: Number },
         coordinates: [Number]
     },
     openingTimes: [openingTimeSchema]

@@ -16,6 +16,7 @@ export class FrameworkComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    localStorage.setItem('theme-value', 'light');
     this.initTheme();
     if (window.screen.width < 600) {
       this.mobile = true;
@@ -29,6 +30,7 @@ export class FrameworkComponent implements OnInit {
   }
 
   public toggleTheme(): void {
+
     if (this.theme === FrameworkComponent.DARK_THEME_DARK) {
       this.document.documentElement.classList.remove(FrameworkComponent.DARK_THEME_CLASS);
       this.theme = FrameworkComponent.DARK_THEME_LIGHT;

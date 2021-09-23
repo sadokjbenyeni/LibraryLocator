@@ -20,14 +20,21 @@ export class LocationDetailsComponent implements OnInit {
 
   public message: string;
   public library: Library;
+  public coords: number[];
 
   ngOnInit(): void {
     this.getLibraryDetails();
-    this.getPosition();
+    this.initializeMap();
+    this.getLibraryDetails();
+    // this.getPosition();
   }
 
-  private getLocations(position: any): void {
-    this.message = 'Searching for nearby places';
+  private async getLibraryDetails(): Promise<void> {
+    this.library = await this.libraryLocatorDataService.getLibraryById(this.libraryId);
+  }
+
+  private async initializeMap(): Promise<void> {
+    let foundCoords = await this.libraryLocatorDataService.getCoordsById(this.libraryId);
     mapboxgl.accessToken = ACCESS_TOKEN;
     mapboxgl.setRTLTextPlugin(
       'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
@@ -37,19 +44,15 @@ export class LocationDetailsComponent implements OnInit {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [this.library.coords[1], this.library.coords[0]],
+      center: [foundCoords[1], foundCoords[0]],
       zoom: 13
     });
-    map.center = [[this.library.coords[1], this.library.coords[0]]];
+    map.center = [[foundCoords[1], foundCoords[0]]];
     const marker = new mapboxgl.Marker({
       color: 'red',
       draggable: true
-    }).setLngLat([this.library.coords[1], this.library.coords[0]])
+    }).setLngLat([foundCoords[1], foundCoords[0]])
       .addTo(map);
-  }
-
-  private getLibraryDetails(): void {
-    this.libraryLocatorDataService.getLibraryById(this.libraryId).then(foundLibrary => this.library = foundLibrary);
   }
   private showError(error: any): void {
     this.message = error.message;
@@ -62,7 +65,7 @@ export class LocationDetailsComponent implements OnInit {
   private getPosition(): void {
     this.message = 'Getting your location ...';
     this.geolocationService.getPosition(
-      this.getLocations.bind(this),
+      this.initializeMap.bind(this),
       this.showError.bind(this),
       this.noGeo.bind(this));
   }

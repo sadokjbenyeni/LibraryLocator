@@ -13,4 +13,8 @@ router
     .put(librariesController.updateLibraryById)
     .delete(librariesController.deleteLibraryById);
 
+
+router
+    .route('/coords/:libraryId')
+    .get(librariesController.getCoordsById);
 module.exports = router;

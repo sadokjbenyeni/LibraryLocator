@@ -58,6 +58,25 @@ const getLibraryById = async (req, res) => {
         res.status(500).json({ "Message": error });
     }
 }
+
+const getCoordsById = async (req, res) => {
+    if (!req.params.libraryId) {
+        return res.status(404).json({ 'Message': 'No Library Id was provided!' });
+    }
+
+    try {
+        let library = await Library.findById(req.params.libraryId).exec();
+        if (!library) {
+            res.status(404).json({ 'Message': 'No library matches your search' });
+        }
+        else {
+            res.status(200).json(library.coords);
+        }
+    } catch (error) {
+        res.status(500).json({ "Message": error });
+    }
+
+}
 const getLibraries = async (req, res) => {
     const lng = parseFloat(req.query.lng);
     const lat = parseFloat(req.query.lat);
@@ -166,5 +185,6 @@ module.exports = {
     getLibraryById,
     updateLibraryById,
     createLibrary,
-    deleteLibraryById
+    deleteLibraryById,
+    getCoordsById
 };

@@ -9,7 +9,9 @@
                     <h2>{{library.name}}</h2>
                 </mat-card-title>
                 <mat-card-subtitle>
-                    <h3>Since {{library.foundationDate}}</h3>
+                    <div *ngIf="library.foundationDate">
+                        <h3>Since {{library.foundationDate}}</h3>
+                    </div>
                 </mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
@@ -24,7 +26,7 @@
                 <p *ngIf="library.website"><b>Website: </b><a href="{{library.website}}">Library Website</a></p>
                 <div *ngIf="library.socialMedia">
                     <p><b>Social Media: </b></p>
-                    <div >
+                    <div>
                         <button *ngIf="library.socialMedia.facebook" mat-icon-button>
                             <a class="facebook-icon" href={{library.socialMedia.facebook}}></a>
                         </button>
