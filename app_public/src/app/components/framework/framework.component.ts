@@ -17,7 +17,7 @@ export class FrameworkComponent implements OnInit {
 
   ngOnInit(): void {
     localStorage.setItem('theme-value', 'light');
-    this.initTheme();
+    this.initTheme(); 
     if (window.screen.width < 600) {
       this.mobile = true;
     }
