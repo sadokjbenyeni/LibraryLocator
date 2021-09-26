@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Library } from '../models/library';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,7 +9,7 @@ export class LibraryLocatorDataService {
 
   constructor(private http: HttpClient) { }
 
-  private apiBaseUrl = 'http://localhost:3000/api';
+  private apiBaseUrl = environment.apiBaseUrl;
 
   public getLibraries(lng: number, lat: number, maxDistance: number): Promise<Library[]> {
     const url = `${this.apiBaseUrl}/libraries?lng=${lng}&lat=${lat}&maxDistance=${maxDistance}`;
