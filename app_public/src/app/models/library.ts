@@ -10,6 +10,7 @@ class SocialMedia {
     youtube: string;
     wikipedia: string;
     other: string;
+    
 }
 
 export class Library {
