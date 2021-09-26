@@ -20,8 +20,8 @@ app.use(cors());
 //   next();
 // })
 app.use('/api', indexRouter);
-app.get('*', function (req, res, next) {
-  app.use(express.static(path.json(__dirname, 'app_public', 'build', 'index.html')));
+app.get(/(\/about)|(\/libraries\/[a-z0-9]{24})/, function (req, res, next) {
+  res.sendFile(path.join(__dirname, 'app_public', 'build', 'index.html'));
 });
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
