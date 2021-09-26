@@ -27,7 +27,7 @@ import { FormsModule } from '@angular/forms';
       component: AboutComponent
     },
     {
-      path: 'libraries/:libraryId',
+      path: 'locations/:libraryId',
       component: LocationDetailsComponent
     }]
     ),
