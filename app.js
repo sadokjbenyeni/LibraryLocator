@@ -19,6 +19,11 @@ app.use(cors());
 //   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 //   next();
 // })
+app.use(function(err, req, res, next){
+  if (location.protocol !== 'https:') {
+    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}
+})
 app.use('/api', indexRouter);
 app.get(/(\/about)|(\/libraries\/[a-z0-9]{24})/, function (req, res, next) {
   res.sendFile(path.join(__dirname, 'app_public', 'build', 'index.html'));
